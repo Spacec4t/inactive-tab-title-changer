@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Inactive Tab Title Changer
  * Description: Changes the browser tab's title when the tab is inactive.
- * Version: 1.0
+ * Version: 1.0.0
  * Author: Christoph Lindhauer, f5.design
  * Author URI: https://f5.design
  * License: GPL2
@@ -44,11 +44,11 @@ function ittc_options_page() {
             <table class="form-table">
                 <tr valign="top">
                     <th scope="row"><label for="ittc_inactive_title"><?php _e('Inactive Tab Title', 'inactive-tab-title-changer'); ?></label></th>
-                    <td><input type="text" id="ittc_inactive_title" name="ittc_inactive_title" value="<?php echo get_option('ittc_inactive_title'); ?>" /></td>
+                    <td><input type="text" id="ittc_inactive_title" name="ittc_inactive_title" value="<?php echo esc_attr(get_option('ittc_inactive_title')); ?>" /></td>
                 </tr>
                 <tr valign="top">
                     <th scope="row"><label for="ittc_timeout"><?php _e('Timeout (ms)', 'inactive-tab-title-changer'); ?></label></th>
-                    <td><input type="number" id="ittc_timeout" name="ittc_timeout" value="<?php echo get_option('ittc_timeout'); ?>" /></td>
+                    <td><input type="number" id="ittc_timeout" name="ittc_timeout" value="<?php echo esc_attr(get_option('ittc_timeout')); ?>" /></td>
                 </tr>
             </table>
             <?php submit_button(); ?>
